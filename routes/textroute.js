@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const pathway = path.join(__dirname, '../public');
+const pathway = path.join(__dirname, '../');
 
 router.get('/notes', (req, res) => {
     res.sendFile(path.join(pathway, 'notes.html'), err => {
