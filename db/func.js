@@ -46,7 +46,7 @@ class Store {
         const newnotes = { title, text, id: uuid() };
         return this.getnotes()
             .then((notes) => [...notes, newnotes])
-            .then((updatedNotes) => this.write(updatedNotes))
+            .then((updatenotes) => this.write(updatenotes))
             .then(() => newnotes)
             .catch((error) => {
                 console.error('Add note operation failed:', error);
@@ -70,9 +70,9 @@ class Store {
     async removenotes(id) {
         return this.getnotes()
             .then((notes) => notes.filter(note => note.id !== id))
-            .then((keptNotes) => this.write(keptNotes))
+            .then((keepnotes) => this.write(keepnotes))
             .catch((error) => {
-                console.error('Remove note operation failed:', error);
+                console.error('Remove note fail', error);
                 throw new Error('Failed to remove note'); });
     }
 }
