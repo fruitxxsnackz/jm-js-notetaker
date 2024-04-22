@@ -10,4 +10,4 @@
 
  ## Launched Application
 
- Link: 
+ Link: https://fruitxxsnackz.github.io/jm-js-notetaker/ 
